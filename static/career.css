@@ -30,7 +30,6 @@
     left: 108px;
     font-family: "Inter-Bold", Helvetica;
     font-weight: 700;
-    color: #7e92a4;
     font-size: 30px;
     letter-spacing: -2.1px;
     line-height: normal;
@@ -107,9 +106,9 @@
 }
 
 .career-quiz-sample .info {
-    position: relative;
-    padding-top: 285px;
-    padding-left: 50px;
+    position: absolute;
+    margin-top: 285px;
+    margin-left: 56px;
 }
 
 .career-quiz-sample .text-wrapper-6 {

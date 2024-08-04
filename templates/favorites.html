@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/globals.css" />
+    <link rel="stylesheet" href="/static/styleguide.css" />
+    <link rel="stylesheet" href="/static/favorites.css" />
+</head>
+
+<body>
+    <div class="favorites-wrapper">
+        <p id="favs" style="visibility: hidden; height: 0px; width: 10px">{{ favorites }}</p>
+        <div class="favorites">
+            <div id="header">
+                <h1 class="empty">Favorites List</h1> <br/>
+                <p class="help">All of the careers you favorited during the quiz are here. <br/> Click "proceed" to finalize your career choice.</p>
+                <br/>
+                <a class="return" href="careerinit">Return to Quiz</a><br/>
+                <div>
+                    <ul id="list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/scripts/favorites.js"></script>
+</body>
+
+</html>

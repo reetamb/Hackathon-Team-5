@@ -3,11 +3,13 @@ import json, random
 unseen = []
 favorites = []
 rejects = []
+total = 0
 
 data = dict()
-with open('careers.json', newline='') as careers:
+with open('static/scripts/data/careers.json', newline='') as careers:
     data = json.load(careers)
-    unseen = list(data.keys())
+    unseen = list(set(data.keys()))[0:40]
+    total = len(unseen)
 
 current = ""
 
@@ -33,3 +35,7 @@ def newCareer(prevReject):
         return data.get(current)
     else:
         return "END"
+
+def getProgress():
+    global unseen, favorites, rejects, current, data, total
+    return "{}/{}".format(total - len(unseen), total)

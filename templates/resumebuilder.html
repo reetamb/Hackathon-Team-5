@@ -1,86 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Creator</title>
+
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="resumebuilderstyle.css"/>
-  </head>
-  <body>
-    <div class="resume-builder">
-      <div class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <div class="overlap">
-            <div class="div">
-              <div class="text-wrapper">resume builder</div>
-              <p class="p">Filll out the following fields, press submit, and get your own downloadable resume!</p>
-              <div class="text-wrapper-2">Basic Information</div>
-              <p class="text-wrapper-3">we do not keep your information</p>
-              <div class="input-field">
-                <div class="label">Full Name (First Last)</div>
-                <div class="input"><div class="value"></div></div>
-              </div>
-            </div>
-            <img class="x" src="img/x.svg" />
-            <img class="black-white-simple" src="img/black-white-simple-talk-logo-5-2.png" />
-          </div>
-          <div class="overlap-2">
-            <div class="text-wrapper-4">Education</div>
-            <div class="input-field-2">
-              <p class="label">Name of Academic Institution (College, University, Secondary School)</p>
-              <div class="input"><div class="value"></div></div>
-            </div>
-          </div>
-          <div class="text-wrapper-5">+ add more education</div>
-          <div class="text-wrapper-6">+ add more experiences</div>
-          <div class="input-field-3">
-            <div class="label">Years Attended (ex. 2000-2004)</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-4">
-            <p class="label">Diploma Achieved (Associate’s Degree, BA, ...)</p>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="overlap-3">
-            <div class="text-wrapper-4">Experience</div>
-            <div class="input-field-2">
-              <div class="label">Name of Company/Organization</div>
-              <div class="input"><div class="value"></div></div>
-            </div>
-          </div>
-          <div class="input-field-5">
-            <div class="label">Years Worked (ex. 2000-2004)</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-6">
-            <p class="label">2-3 Job Responsibilities (Teaching kids 3-5 years old, Tidying the Workplace)</p>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-7">
-            <p class="label">3+ Relevant Skills (Microsoft 365, Communication, etc.)</p>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="text-wrapper-7">Skills</div>
-          <div class="input-field-8">
-            <div class="label">Current Role</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-9">
-            <div class="label">Email</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-10">
-            <div class="label">Phone Number</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="input-field-11">
-            <div class="label">Address</div>
-            <div class="input"><div class="value"></div></div>
-          </div>
-          <div class="frame"><div class="text-wrapper-8">build my resume!</div></div>
-        </div>
-      </div>
+    <link rel="stylesheet" href="/static/globals.css" />
+    <link rel="stylesheet" href="/static/resumebuilder.css" />
+</head>
+</head>
+
+<body>
+
+    <div class="exit">
+        <a href="home" target="_self">
+            <img class="X noPrint" src="/static/img/X.svg" alt="Exit">
+        </a>
     </div>
-  </body>
+
+    <section class="resume-builder">
+
+
+        <div class="div" style="border: 0svb;">
+            <div class="header">
+                <div class="headingTitle">
+                    <img class="logo" src="/static/img/star.svg" alt="Logo">
+                    <div class="title">resume builder</div>
+                </div>
+                <div class="info">{{ quizult }}Fill out the following fields, press submit, and get your own
+                    downloadable resume!</div>
+
+                <div class="disclaimer">
+                    <a href="privacypolicy" target="_blank">we do not keep your information</a>
+                </div>
+
+            </div>
+
+
+            <br>
+            <div class="resume_container">
+
+                <form class="inputField">
+
+                    <div class="name">
+                        <div class="label">Basic Details</div>
+                        <br>
+                        <div class="subLabel">Full Name</div>
+                        <input class="input" type="text" name="name" placeholder="First, Last" title="Enter Your Name" />
+                        <br>
+                        <div class="subLabel">Title</div>
+                        <input class="input" type="text" name="title" placeholder="Current Position" title="Enter Your Name" />
+                        <br>
+                    </div>
+
+                    <div class="work_experience">
+                        <div class="label">Work Experience</div>
+                        <br>
+                        <div class="subLabel">Experience 1</div>
+                        <input class="input" type="text" name="workExpTitle1" placeholder="Title (Role, Company, Term)"
+                            title="Work Experience Title" />
+                        <textarea class="input" name="work_experience1" placeholder="Work Description" cols="50" rows="3"
+                            title="Enter Your Work Experience (Position, Company, Term, Description)">
+					</textarea>
+                    <br>
+                    <div class="subLabel">Experience 2</div>
+                    <input class="input" type="text" name="workExpTitle2" placeholder="Title (Role, Company, Term)"
+                            title="Work Experience Title" />
+                        <textarea class="input" name="work_experience2" placeholder="Work Experience" cols="50" rows="3"
+                            title="Enter Your Work Experience (Position, Company, Term, Description)">
+            </textarea>
+            <br>
+            <div class="subLabel">Experience 3</div>
+            <input class="input" type="text" name="workExpTitle3" placeholder="Title (Role, Company, Term)"
+                            title="Work Experience Title" />
+                        <textarea class="input" name="work_experience3" placeholder="Work Experience" cols="50" rows="3"
+                            title="Enter Your Work Experience (Position, Company, Term, Description)">
+    </textarea>
+                    <br>
+                    </div>
+
+
+                    <div class="academics">
+                        <div class="label">Academic Details</div>
+                        <input class="input" type="text" name="diploma" placeholder="Diploma Achieved"
+                            title="Diploma Achieved" />
+                        <input class="input" type="text" name="institute" placeholder="Institute, Years Attended"
+                            title="Diploma Achieved" />
+                        <textarea class="input" name="academics_details" placeholder="Academic Details" cols="50"
+                            rows="3"
+                            title="Details">
+					</textarea>
+                    </div>
+
+                    <br>
+
+                    <div class="skills">
+                        <div class="label">Relevant Skills</div>
+                        <textarea class="input" name="Skills" placeholder="Skills" rows="3"
+                            title="Enter Relevant Skills" />
+                        </textarea>
+                        <br>
+                    </div>
+
+
+                    <div class="email">
+                        <div class="label">Contact Details</div>
+                        <br>
+                        <div class="subLabel">Email</div>
+                        <input class="input" type="text" name="Email" placeholder="myemail@email.com"
+                            title="Enter your Email Address" />
+                        <br>
+                        <div class="subLabel">Phone Number</div>
+                            <input class="input" type="text" name="Phone" placeholder="123-456-7890"
+                                title="Enter your Phone Number" />
+                    </div>
+
+            </div>
+
+
+
+            </form>
+        </div>
+
+        </p>
+
+        </div>
+
+
+    </section>
+
+    <div class="output_container"></div>
+
+    <button onclick="hide()" class="noPrint">Build my Resume!</button>
+    <button class="noPrint"><a href="aiinterviewer" style="color:#FFF;">Proceed to Interview</a></button>
+    <script src="/static/scripts/aiinterviewerpreview.js"></script>
+
+</body>
+
+
 </html>

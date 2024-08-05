@@ -45,7 +45,7 @@ fetch('static/scripts/data/careers.json')
                     let proceed = document.createElement("a");
                     proceed.innerText = "Finalize Choice"
                     proceed.id = json[job]["name"].replace(" ", "_");
-                    proceed.href = "/proceed?job=" + proceed.id;
+                    proceed.href = "/resumebuilder?job=" + proceed.id;
                     console.log(proceed.id);
                     pdiv.classList.add("proceed");
                     pdiv.classList.add("rectangle");

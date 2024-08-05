@@ -120,19 +120,13 @@ button {
     letter-spacing: -1px;
 }
 
-button:hover {
-    font-size: medium;
-}
-
 .output-container {
     width: 80%;
     margin: 10px auto;
     /*flex-direction: column;*/
     justify-items: center;
     justify-content: center;
-
 }
-
 
 .output {
     background-color: white;
@@ -277,7 +271,7 @@ a:hover {
 }
 
 
-@media output {
+@media print {
     .noPrint{
       display:none;
     }

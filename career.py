@@ -38,4 +38,4 @@ def newCareer(prevReject):
 
 def getProgress():
     global unseen, favorites, rejects, current, data, total
-    return "{}/{}".format(total - len(unseen), total)
+    return "{}/{}".format(total - len(unseen) + 1, total)

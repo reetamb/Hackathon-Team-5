@@ -1,6 +1,5 @@
-.career-quiz-start {
-    background-color: rgb(131.87, 152.34, 181.13);
-    background: linear-gradient(180deg, rgb(130.69, 180.41, 159.53) 0%, rgb(131.87, 152.34, 181.13) 100%);
+body {
+    background: linear-gradient(to bottom, rgb(130.69, 180.41, 159.53), rgb(131.87, 152.34, 181.13));
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,7 +12,6 @@
     width: 1169px;
     top: 43px;
     left: 33px;
-    background-image: url(./img/rectangle-8.svg);
     background-size: 100% 100%;
 }
 

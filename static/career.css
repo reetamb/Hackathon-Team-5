@@ -235,3 +235,14 @@
     background-color: var(--blue);
     border-radius: 40px;
 }
+
+.progress {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: #495e72;
+    font-family: Helvetica;
+    font-size: 24px;
+    letter-spacing: -2px;
+    line-height: normal;
+}

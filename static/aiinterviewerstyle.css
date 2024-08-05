@@ -19,7 +19,7 @@ body {
     position: absolute;
     width: 48px;
     height: 48px;
-    top: 5vh;
+    top: 0vh;
     right: 5vw;
 }
 
@@ -61,7 +61,7 @@ body {
 
  .text-wrapper {
     position: absolute;
-    width: 95vw;
+    width: max-content;
     top: 0;
     left: 112px;
     font-family: "Inter-Bold", Helvetica;

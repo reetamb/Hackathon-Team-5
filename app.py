@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, session, url_for, make_response
-from flask import Flask, render_template, request, redirect, session, url_for, make_response
 import career
 import os
 import string
@@ -10,17 +9,8 @@ import json
 
 from aixplain.factories import PipelineFactory
 pipeline = PipelineFactory.get("66a007ce561ded999ac14abf")
-import os
-import string
-import random
-import requests
-import json
-
-# from aixplain.factories import PipelineFactory
-# pipeline = PipelineFactory.get("66a007ce561ded999ac14abf")
 
 app = Flask(__name__)
-app.secret_key = "abcdefg"
 app.secret_key = "abcdefg"
 
 @app.route("/")

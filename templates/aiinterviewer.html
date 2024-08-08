@@ -16,14 +16,14 @@
         <div class="overlap">
             <div class="text-wrapper">AI interviewer</div>
             <a href="home" target="_self">
-                <img class="x" src="/static/img/x.png" />
+                <img class="x" src="/static/img/X.svg" />
             </a>
             <div class="div">
                 <div class="msg-box" id="msg-box">
                     <div class="msg aimsg">What language would you like to be interviewed in?</div>
                 </div>
                 <div class="form">
-                    <form>
+                    <form onsubmit="send(event)" autocomplete="off">
                         <div class="group">
                             <input placeholder="Type your message here..." id="input">
                             <img class="send" src="/static/img/send.png" onclick="send(event)" />

@@ -11,14 +11,16 @@ async function send(event) {
         document.getElementById("msg-box").prepend(el);
         document.getElementById("input").value = "";
         document.getElementById("input").disabled = true;
-
-        let res = await (await fetch("/api/newchat?language=" + text)).text();
+        
         let responseEl = document.createElement("div");
         responseEl.className = "msg aimsg";
-        responseEl.innerHTML = res;
-
+        responseEl.innerHTML = "Thinking...";
         document.getElementById("msg-box").prepend(responseEl);
+
+        let res = await (await fetch("/api/newchat?language=" + text)).text();
+        responseEl.innerHTML = res;
         document.getElementById("input").disabled = false;
+        
         started = true;
         return;
     }
@@ -31,6 +33,12 @@ async function send(event) {
     document.getElementById("input").value = "";
     document.getElementById("input").disabled = true;
 
+    let responseEl = document.createElement("div");
+    responseEl.className = "msg aimsg";
+    responseEl.innerHTML = "Thinking...";
+    document.getElementById("msg-box").prepend(responseEl);
+    document.getElementById("input").disabled = false;
+
     let res = await (await fetch("/api/handlechat", {
         method: "POST",
         headers: {
@@ -38,9 +46,5 @@ async function send(event) {
         },
         body: JSON.stringify({ "role": "user", "content": text }),
     })).text();
-    let responseEl = document.createElement("div");
-    responseEl.className = "msg aimsg";
     responseEl.innerHTML = res;
-    document.getElementById("msg-box").prepend(responseEl);
-    document.getElementById("input").disabled = false;
 }
